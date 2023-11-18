@@ -1,29 +1,14 @@
 import './App.css';
-import {RouterProvider, createBrowserRouter} from "react-router-dom";
-import User from './components/getuser/User';
-import Add from './components/adduser/Add';
-import Edit from './components/updateuser/Edit';
+import LogIngestion from './components/LogIngestion';
+import LogRetrivel from './components/LogRetrivel';
 
 function App() {
 
-  const route = createBrowserRouter([
-    {
-      path:"/",
-      element: <User/>,
-    },
-    {
-      path:"/add",
-      element: <Add/>,
-    },
-    {
-      path:"/edit/:id",
-      element: <Edit/>,
-    },
-  ])
-
+  
   return (
     <div className="App">
-       <RouterProvider router={route}></RouterProvider>
+    <LogIngestion/>
+      <LogRetrivel/>
     </div>
   );
 }
