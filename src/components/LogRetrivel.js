@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 
 const LogRetrivel = () => {
   //localhost
-  const socket = io('http://localhost:8000');
+  const socket = io('https://backenddyte.onrender.com');
 
   const [logs, setLogs] = useState([]);
   const [filters, setFilters] = useState({
@@ -22,7 +22,7 @@ const LogRetrivel = () => {
     const fetchLogs = async () => {
       try {
         //calling the api 
-        const response = await axios.get('http://localhost:8000/api/getAll');
+        const response = await axios.get('https://backenddyte.onrender.com/api/getAll');
         let filteredLogs = response.data;
 
         // Apply client-side filtering based on the provided filters
