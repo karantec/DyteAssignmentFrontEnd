@@ -20,7 +20,7 @@ const LogIngestion = () => {
 
   const handleLogIngestion = async () => {
     try {
-      await axios.post('https://backenddyte.onrender.com/api/create', logData);
+      await axios.post('http://localhost:8000/api/create', logData);
       console.log('Log ingested successfully');
       // Optionally, clear the form after successful ingestion
       setLogData({
