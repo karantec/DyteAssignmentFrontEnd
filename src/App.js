@@ -6,6 +6,8 @@ function App() {
 
   
   return (
+    // both the logIngestion file
+    
     <div className="App">
     <LogIngestion/>
       <LogRetrivel/>
